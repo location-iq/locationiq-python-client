@@ -31,21 +31,26 @@ class Daybalance(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'day': 'int'
+        'day': 'int',
+        'bonus': 'int'
     }
 
     attribute_map = {
-        'day': 'day'
+        'day': 'day',
+        'bonus': 'bonus'
     }
 
-    def __init__(self, day=None):  # noqa: E501
+    def __init__(self, day=None, bonus=None):  # noqa: E501
         """Daybalance - a model defined in OpenAPI"""  # noqa: E501
 
         self._day = None
+        self._bonus = None
         self.discriminator = None
 
         if day is not None:
             self.day = day
+        if bonus is not None:
+            self.bonus = bonus
 
     @property
     def day(self):
@@ -67,6 +72,27 @@ class Daybalance(object):
         """
 
         self._day = day
+
+    @property
+    def bonus(self):
+        """Gets the bonus of this Daybalance.  # noqa: E501
+
+
+        :return: The bonus of this Daybalance.  # noqa: E501
+        :rtype: int
+        """
+        return self._bonus
+
+    @bonus.setter
+    def bonus(self, bonus):
+        """Sets the bonus of this Daybalance.
+
+
+        :param bonus: The bonus of this Daybalance.  # noqa: E501
+        :type: int
+        """
+
+        self._bonus = bonus
 
     def to_dict(self):
         """Returns the model properties as a dict"""

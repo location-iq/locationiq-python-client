@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **reverse**
-> Location reverse(lat, lon, format, normalizecity, addressdetails=addressdetails, accept_language=accept_language, namedetails=namedetails, extratags=extratags)
+> Location reverse(lat, lon, format, normalizecity, addressdetails=addressdetails, accept_language=accept_language, namedetails=namedetails, extratags=extratags, statecode=statecode)
 
 Reverse Geocoding
 
@@ -38,10 +38,11 @@ addressdetails = 1 # int | Include a breakdown of the address into elements. Def
 accept_language = "en" # str | Preferred language order for showing search results, overrides the value specified in the Accept-Language HTTP header. Defaults to en. To use native language for the response when available, use accept-language=native (optional)
 namedetails = 0 # int | Include a list of alternative names in the results. These may include language variants, references, operator and brand. (optional)
 extratags = 0 # int | Include additional information in the result if available, e.g. wikipedia link, opening hours. (optional)
+statecode = 0 # int | Adds state or province code when available to the statecode key inside the address element. Currently supported for addresses in the USA, Canada and Australia. Defaults to 0 (optional)
 
 try:
     # Reverse Geocoding
-    api_response = api_instance.reverse(lat, lon, format, normalizecity, addressdetails=addressdetails, accept_language=accept_language, namedetails=namedetails, extratags=extratags)
+    api_response = api_instance.reverse(lat, lon, format, normalizecity, addressdetails=addressdetails, accept_language=accept_language, namedetails=namedetails, extratags=extratags, statecode=statecode)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ReverseApi->reverse: %s\n" % e)
@@ -59,6 +60,7 @@ Name | Type | Description  | Notes
  **accept_language** | **str**| Preferred language order for showing search results, overrides the value specified in the Accept-Language HTTP header. Defaults to en. To use native language for the response when available, use accept-language&#x3D;native | [optional] 
  **namedetails** | **int**| Include a list of alternative names in the results. These may include language variants, references, operator and brand. | [optional] 
  **extratags** | **int**| Include additional information in the result if available, e.g. wikipedia link, opening hours. | [optional] 
+ **statecode** | **int**| Adds state or province code when available to the statecode key inside the address element. Currently supported for addresses in the USA, Canada and Australia. Defaults to 0 | [optional] 
 
 ### Return type
 

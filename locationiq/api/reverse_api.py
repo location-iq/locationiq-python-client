@@ -50,6 +50,7 @@ class ReverseApi(object):
         :param str accept_language: Preferred language order for showing search results, overrides the value specified in the Accept-Language HTTP header. Defaults to en. To use native language for the response when available, use accept-language=native
         :param int namedetails: Include a list of alternative names in the results. These may include language variants, references, operator and brand.
         :param int extratags: Include additional information in the result if available, e.g. wikipedia link, opening hours.
+        :param int statecode: Adds state or province code when available to the statecode key inside the address element. Currently supported for addresses in the USA, Canada and Australia. Defaults to 0
         :return: Location
                  If the method is called asynchronously,
                  returns the request thread.
@@ -79,6 +80,7 @@ class ReverseApi(object):
         :param str accept_language: Preferred language order for showing search results, overrides the value specified in the Accept-Language HTTP header. Defaults to en. To use native language for the response when available, use accept-language=native
         :param int namedetails: Include a list of alternative names in the results. These may include language variants, references, operator and brand.
         :param int extratags: Include additional information in the result if available, e.g. wikipedia link, opening hours.
+        :param int statecode: Adds state or province code when available to the statecode key inside the address element. Currently supported for addresses in the USA, Canada and Australia. Defaults to 0
         :return: Location
                  If the method is called asynchronously,
                  returns the request thread.
@@ -86,7 +88,7 @@ class ReverseApi(object):
 
         local_var_params = locals()
 
-        all_params = ['lat', 'lon', 'format', 'normalizecity', 'addressdetails', 'accept_language', 'namedetails', 'extratags']  # noqa: E501
+        all_params = ['lat', 'lon', 'format', 'normalizecity', 'addressdetails', 'accept_language', 'namedetails', 'extratags', 'statecode']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -146,6 +148,8 @@ class ReverseApi(object):
             query_params.append(('namedetails', local_var_params['namedetails']))  # noqa: E501
         if 'extratags' in local_var_params:
             query_params.append(('extratags', local_var_params['extratags']))  # noqa: E501
+        if 'statecode' in local_var_params:
+            query_params.append(('statecode', local_var_params['statecode']))  # noqa: E501
 
         header_params = {}
 

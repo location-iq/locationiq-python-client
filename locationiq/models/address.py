@@ -34,41 +34,71 @@ class Address(object):
         'house_number': 'str',
         'road': 'str',
         'residential': 'str',
+        'borough': 'str',
+        'neighbourhood': 'str',
+        'quarter': 'str',
+        'hamlet': 'str',
+        'suburb': 'str',
+        'island': 'str',
         'village': 'str',
+        'town': 'str',
+        'city': 'str',
+        'city_district': 'str',
         'county': 'str',
         'state': 'str',
+        'state_district': 'str',
         'postcode': 'str',
         'country': 'str',
         'country_code': 'str',
-        'city': 'str'
+        'state_code': 'str'
     }
 
     attribute_map = {
         'house_number': 'house_number',
         'road': 'road',
         'residential': 'residential',
+        'borough': 'borough',
+        'neighbourhood': 'neighbourhood',
+        'quarter': 'quarter',
+        'hamlet': 'hamlet',
+        'suburb': 'suburb',
+        'island': 'island',
         'village': 'village',
+        'town': 'town',
+        'city': 'city',
+        'city_district': 'city_district',
         'county': 'county',
         'state': 'state',
+        'state_district': 'state_district',
         'postcode': 'postcode',
         'country': 'country',
         'country_code': 'country_code',
-        'city': 'city'
+        'state_code': 'state_code'
     }
 
-    def __init__(self, house_number=None, road=None, residential=None, village=None, county=None, state=None, postcode=None, country=None, country_code=None, city=None):  # noqa: E501
+    def __init__(self, house_number=None, road=None, residential=None, borough=None, neighbourhood=None, quarter=None, hamlet=None, suburb=None, island=None, village=None, town=None, city=None, city_district=None, county=None, state=None, state_district=None, postcode=None, country=None, country_code=None, state_code=None):  # noqa: E501
         """Address - a model defined in OpenAPI"""  # noqa: E501
 
         self._house_number = None
         self._road = None
         self._residential = None
+        self._borough = None
+        self._neighbourhood = None
+        self._quarter = None
+        self._hamlet = None
+        self._suburb = None
+        self._island = None
         self._village = None
+        self._town = None
+        self._city = None
+        self._city_district = None
         self._county = None
         self._state = None
+        self._state_district = None
         self._postcode = None
         self._country = None
         self._country_code = None
-        self._city = None
+        self._state_code = None
         self.discriminator = None
 
         if house_number is not None:
@@ -77,20 +107,40 @@ class Address(object):
             self.road = road
         if residential is not None:
             self.residential = residential
+        if borough is not None:
+            self.borough = borough
+        if neighbourhood is not None:
+            self.neighbourhood = neighbourhood
+        if quarter is not None:
+            self.quarter = quarter
+        if hamlet is not None:
+            self.hamlet = hamlet
+        if suburb is not None:
+            self.suburb = suburb
+        if island is not None:
+            self.island = island
         if village is not None:
             self.village = village
+        if town is not None:
+            self.town = town
+        if city is not None:
+            self.city = city
+        if city_district is not None:
+            self.city_district = city_district
         if county is not None:
             self.county = county
         if state is not None:
             self.state = state
+        if state_district is not None:
+            self.state_district = state_district
         if postcode is not None:
             self.postcode = postcode
         if country is not None:
             self.country = country
         if country_code is not None:
             self.country_code = country_code
-        if city is not None:
-            self.city = city
+        if state_code is not None:
+            self.state_code = state_code
 
     @property
     def house_number(self):
@@ -156,6 +206,132 @@ class Address(object):
         self._residential = residential
 
     @property
+    def borough(self):
+        """Gets the borough of this Address.  # noqa: E501
+
+
+        :return: The borough of this Address.  # noqa: E501
+        :rtype: str
+        """
+        return self._borough
+
+    @borough.setter
+    def borough(self, borough):
+        """Sets the borough of this Address.
+
+
+        :param borough: The borough of this Address.  # noqa: E501
+        :type: str
+        """
+
+        self._borough = borough
+
+    @property
+    def neighbourhood(self):
+        """Gets the neighbourhood of this Address.  # noqa: E501
+
+
+        :return: The neighbourhood of this Address.  # noqa: E501
+        :rtype: str
+        """
+        return self._neighbourhood
+
+    @neighbourhood.setter
+    def neighbourhood(self, neighbourhood):
+        """Sets the neighbourhood of this Address.
+
+
+        :param neighbourhood: The neighbourhood of this Address.  # noqa: E501
+        :type: str
+        """
+
+        self._neighbourhood = neighbourhood
+
+    @property
+    def quarter(self):
+        """Gets the quarter of this Address.  # noqa: E501
+
+
+        :return: The quarter of this Address.  # noqa: E501
+        :rtype: str
+        """
+        return self._quarter
+
+    @quarter.setter
+    def quarter(self, quarter):
+        """Sets the quarter of this Address.
+
+
+        :param quarter: The quarter of this Address.  # noqa: E501
+        :type: str
+        """
+
+        self._quarter = quarter
+
+    @property
+    def hamlet(self):
+        """Gets the hamlet of this Address.  # noqa: E501
+
+
+        :return: The hamlet of this Address.  # noqa: E501
+        :rtype: str
+        """
+        return self._hamlet
+
+    @hamlet.setter
+    def hamlet(self, hamlet):
+        """Sets the hamlet of this Address.
+
+
+        :param hamlet: The hamlet of this Address.  # noqa: E501
+        :type: str
+        """
+
+        self._hamlet = hamlet
+
+    @property
+    def suburb(self):
+        """Gets the suburb of this Address.  # noqa: E501
+
+
+        :return: The suburb of this Address.  # noqa: E501
+        :rtype: str
+        """
+        return self._suburb
+
+    @suburb.setter
+    def suburb(self, suburb):
+        """Sets the suburb of this Address.
+
+
+        :param suburb: The suburb of this Address.  # noqa: E501
+        :type: str
+        """
+
+        self._suburb = suburb
+
+    @property
+    def island(self):
+        """Gets the island of this Address.  # noqa: E501
+
+
+        :return: The island of this Address.  # noqa: E501
+        :rtype: str
+        """
+        return self._island
+
+    @island.setter
+    def island(self, island):
+        """Sets the island of this Address.
+
+
+        :param island: The island of this Address.  # noqa: E501
+        :type: str
+        """
+
+        self._island = island
+
+    @property
     def village(self):
         """Gets the village of this Address.  # noqa: E501
 
@@ -175,6 +351,69 @@ class Address(object):
         """
 
         self._village = village
+
+    @property
+    def town(self):
+        """Gets the town of this Address.  # noqa: E501
+
+
+        :return: The town of this Address.  # noqa: E501
+        :rtype: str
+        """
+        return self._town
+
+    @town.setter
+    def town(self, town):
+        """Sets the town of this Address.
+
+
+        :param town: The town of this Address.  # noqa: E501
+        :type: str
+        """
+
+        self._town = town
+
+    @property
+    def city(self):
+        """Gets the city of this Address.  # noqa: E501
+
+
+        :return: The city of this Address.  # noqa: E501
+        :rtype: str
+        """
+        return self._city
+
+    @city.setter
+    def city(self, city):
+        """Sets the city of this Address.
+
+
+        :param city: The city of this Address.  # noqa: E501
+        :type: str
+        """
+
+        self._city = city
+
+    @property
+    def city_district(self):
+        """Gets the city_district of this Address.  # noqa: E501
+
+
+        :return: The city_district of this Address.  # noqa: E501
+        :rtype: str
+        """
+        return self._city_district
+
+    @city_district.setter
+    def city_district(self, city_district):
+        """Sets the city_district of this Address.
+
+
+        :param city_district: The city_district of this Address.  # noqa: E501
+        :type: str
+        """
+
+        self._city_district = city_district
 
     @property
     def county(self):
@@ -217,6 +456,27 @@ class Address(object):
         """
 
         self._state = state
+
+    @property
+    def state_district(self):
+        """Gets the state_district of this Address.  # noqa: E501
+
+
+        :return: The state_district of this Address.  # noqa: E501
+        :rtype: str
+        """
+        return self._state_district
+
+    @state_district.setter
+    def state_district(self, state_district):
+        """Sets the state_district of this Address.
+
+
+        :param state_district: The state_district of this Address.  # noqa: E501
+        :type: str
+        """
+
+        self._state_district = state_district
 
     @property
     def postcode(self):
@@ -282,25 +542,25 @@ class Address(object):
         self._country_code = country_code
 
     @property
-    def city(self):
-        """Gets the city of this Address.  # noqa: E501
+    def state_code(self):
+        """Gets the state_code of this Address.  # noqa: E501
 
 
-        :return: The city of this Address.  # noqa: E501
+        :return: The state_code of this Address.  # noqa: E501
         :rtype: str
         """
-        return self._city
+        return self._state_code
 
-    @city.setter
-    def city(self, city):
-        """Sets the city of this Address.
+    @state_code.setter
+    def state_code(self, state_code):
+        """Sets the state_code of this Address.
 
 
-        :param city: The city of this Address.  # noqa: E501
+        :param state_code: The state_code of this Address.  # noqa: E501
         :type: str
         """
 
-        self._city = city
+        self._state_code = state_code
 
     def to_dict(self):
         """Returns the model properties as a dict"""
