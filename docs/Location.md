@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**distance** | **float** |  | [optional] 
 **place_id** | **str** |  | [optional] 
 **licence** | **str** |  | [optional] 
 **osm_type** | **str** |  | [optional] 
@@ -16,6 +17,7 @@ Name | Type | Description | Notes
 **importance** | **float** |  | [optional] 
 **address** | [**Address**](Address.md) |  | [optional] 
 **namedetails** | [**Namedetails**](Namedetails.md) |  | [optional] 
+**matchquality** | [**Matchquality**](Matchquality.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
