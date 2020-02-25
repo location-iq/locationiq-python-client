@@ -15,7 +15,7 @@ import re  # noqa: F401
 
 import six
 
-from openapi_client.configuration import Configuration
+from locationiq.configuration import Configuration
 
 
 class Address(object):

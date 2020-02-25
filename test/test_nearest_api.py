@@ -14,16 +14,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import openapi_client
-from openapi_client.api.nearest_api import NearestApi  # noqa: E501
-from openapi_client.rest import ApiException
+import locationiq
+from locationiq.api.nearest_api import NearestApi  # noqa: E501
+from locationiq.rest import ApiException
 
 
 class TestNearestApi(unittest.TestCase):
     """NearestApi unit test stubs"""
 
     def setUp(self):
-        self.api = openapi_client.api.nearest_api.NearestApi()  # noqa: E501
+        self.api = locationiq.api.nearest_api.NearestApi()  # noqa: E501
 
     def tearDown(self):
         pass

@@ -14,16 +14,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import openapi_client
-from openapi_client.api.reverse_api import ReverseApi  # noqa: E501
-from openapi_client.rest import ApiException
+import locationiq
+from locationiq.api.reverse_api import ReverseApi  # noqa: E501
+from locationiq.rest import ApiException
 
 
 class TestReverseApi(unittest.TestCase):
     """ReverseApi unit test stubs"""
 
     def setUp(self):
-        self.api = openapi_client.api.reverse_api.ReverseApi()  # noqa: E501
+        self.api = locationiq.api.reverse_api.ReverseApi()  # noqa: E501
 
     def tearDown(self):
         pass

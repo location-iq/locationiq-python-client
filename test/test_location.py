@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.location import Location  # noqa: E501
-from openapi_client.rest import ApiException
+import locationiq
+from locationiq.models.location import Location  # noqa: E501
+from locationiq.rest import ApiException
 
 class TestLocation(unittest.TestCase):
     """Location unit test stubs"""
@@ -33,7 +33,7 @@ class TestLocation(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.location.Location()  # noqa: E501
+        # model = locationiq.models.location.Location()  # noqa: E501
         if include_optional :
             return Location(
                 distance = 1.337, 
@@ -52,7 +52,7 @@ class TestLocation(unittest.TestCase):
                 importance = 1.337, 
                 address = {"house_number":"3894","road":"Spring Mill Way","residential":"Hunter’s Point","village":"Landen","city":"Landen","county":"Warren County","state":"Ohio","postcode":"45039","country":"United States of America","country_code":"us","state_code":"oh"}, 
                 namedetails = {"name":"\"Empire State Building\""}, 
-                matchquality = openapi_client.models.matchquality.matchquality(
+                matchquality = locationiq.models.matchquality.matchquality(
                     matchcode = '0', 
                     matchtype = '0', 
                     matchlevel = '0', )

@@ -14,16 +14,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import openapi_client
-from openapi_client.api.directions_api import DirectionsApi  # noqa: E501
-from openapi_client.rest import ApiException
+import locationiq
+from locationiq.api.directions_api import DirectionsApi  # noqa: E501
+from locationiq.rest import ApiException
 
 
 class TestDirectionsApi(unittest.TestCase):
     """DirectionsApi unit test stubs"""
 
     def setUp(self):
-        self.api = openapi_client.api.directions_api.DirectionsApi()  # noqa: E501
+        self.api = locationiq.api.directions_api.DirectionsApi()  # noqa: E501
 
     def tearDown(self):
         pass

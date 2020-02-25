@@ -1,4 +1,4 @@
-# openapi_client.ReverseApi
+# locationiq.ReverseApi
 
 All URIs are relative to *https://eu1.locationiq.com/v1*
 
@@ -20,10 +20,10 @@ Reverse geocoding is the process of converting a coordinate or location (latitud
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import locationiq
+from locationiq.rest import ApiException
 from pprint import pprint
-configuration = openapi_client.Configuration()
+configuration = locationiq.Configuration()
 # Configure API key authorization: key
 configuration.api_key['key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -32,9 +32,9 @@ configuration.api_key['key'] = 'YOUR_API_KEY'
 # Defining host is optional and default to https://eu1.locationiq.com/v1
 configuration.host = "https://eu1.locationiq.com/v1"
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with locationiq.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ReverseApi(api_client)
+    api_instance = locationiq.ReverseApi(api_client)
     lat = 40.7487727 # float | Latitude of the location to generate an address for.
 lon = -73.9849336 # float | Longitude of the location to generate an address for.
 format = 'json' # str | Format to geocode. Only JSON supported for SDKs

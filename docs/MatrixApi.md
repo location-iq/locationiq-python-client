@@ -1,4 +1,4 @@
-# openapi_client.MatrixApi
+# locationiq.MatrixApi
 
 All URIs are relative to *https://eu1.locationiq.com/v1*
 
@@ -20,10 +20,10 @@ Computes duration of the fastest route between all pairs of supplied coordinates
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import locationiq
+from locationiq.rest import ApiException
 from pprint import pprint
-configuration = openapi_client.Configuration()
+configuration = locationiq.Configuration()
 # Configure API key authorization: key
 configuration.api_key['key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -32,9 +32,9 @@ configuration.api_key['key'] = 'YOUR_API_KEY'
 # Defining host is optional and default to https://eu1.locationiq.com/v1
 configuration.host = "https://eu1.locationiq.com/v1"
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with locationiq.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MatrixApi(api_client)
+    api_instance = locationiq.MatrixApi(api_client)
     coordinates = '-0.16102,51.523854;-0.15797,51.52326;-0.161593,51.522550' # str | String of format {longitude},{latitude};{longitude},{latitude}[;{longitude},{latitude} ...] or polyline({polyline}) or polyline6({polyline6}). polyline follows Google's polyline format with precision 5
 bearings = '10,20;40,30;30,9' # str | Limits the search to segments with given bearing in degrees towards true north in clockwise direction. List of positive integer pairs separated by semi-colon and bearings array should be equal to length of coordinate array. Input Value :- {bearing};{bearing}[;{bearing} ...] Bearing follows the following format : bearing {value},{range} integer 0 .. 360,integer 0 .. 180 (optional)
 radiuses = '500;200;300' # str | Limits the search to given radius in meters Radiuses array length should be same as coordinates array, eaach value separated by semi-colon. Input Value - {radius};{radius}[;{radius} ...] Radius has following format :- double >= 0 or unlimited (default) (optional)

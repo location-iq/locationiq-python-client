@@ -14,16 +14,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import openapi_client
-from openapi_client.api.search_api import SearchApi  # noqa: E501
-from openapi_client.rest import ApiException
+import locationiq
+from locationiq.api.search_api import SearchApi  # noqa: E501
+from locationiq.rest import ApiException
 
 
 class TestSearchApi(unittest.TestCase):
     """SearchApi unit test stubs"""
 
     def setUp(self):
-        self.api = openapi_client.api.search_api.SearchApi()  # noqa: E501
+        self.api = locationiq.api.search_api.SearchApi()  # noqa: E501
 
     def tearDown(self):
         pass

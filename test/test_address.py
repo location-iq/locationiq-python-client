@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.address import Address  # noqa: E501
-from openapi_client.rest import ApiException
+import locationiq
+from locationiq.models.address import Address  # noqa: E501
+from locationiq.rest import ApiException
 
 class TestAddress(unittest.TestCase):
     """Address unit test stubs"""
@@ -33,7 +33,7 @@ class TestAddress(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.address.Address()  # noqa: E501
+        # model = locationiq.models.address.Address()  # noqa: E501
         if include_optional :
             return Address(
                 house_number = '0', 

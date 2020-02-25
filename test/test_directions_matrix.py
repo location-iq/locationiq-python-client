@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.directions_matrix import DirectionsMatrix  # noqa: E501
-from openapi_client.rest import ApiException
+import locationiq
+from locationiq.models.directions_matrix import DirectionsMatrix  # noqa: E501
+from locationiq.rest import ApiException
 
 class TestDirectionsMatrix(unittest.TestCase):
     """DirectionsMatrix unit test stubs"""
@@ -33,7 +33,7 @@ class TestDirectionsMatrix(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.directions_matrix.DirectionsMatrix()  # noqa: E501
+        # model = locationiq.models.directions_matrix.DirectionsMatrix()  # noqa: E501
         if include_optional :
             return DirectionsMatrix(
                 code = '0', 
@@ -44,7 +44,7 @@ class TestDirectionsMatrix(unittest.TestCase):
                     1.337
                     ], 
                 sources = [
-                    openapi_client.models.directions_matrix_sources.directions_matrix_sources(
+                    locationiq.models.directions_matrix_sources.directions_matrix_sources(
                         distance = 1.337, 
                         location = [
                             1.337
@@ -52,7 +52,7 @@ class TestDirectionsMatrix(unittest.TestCase):
                         name = '0', )
                     ], 
                 destinations = [
-                    openapi_client.models.directions_matrix_sources.directions_matrix_sources(
+                    locationiq.models.directions_matrix_sources.directions_matrix_sources(
                         distance = 1.337, 
                         location = [
                             1.337

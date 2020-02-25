@@ -1,4 +1,4 @@
-# openapi_client.NearestApi
+# locationiq.NearestApi
 
 All URIs are relative to *https://eu1.locationiq.com/v1*
 
@@ -20,10 +20,10 @@ Snaps a coordinate to the street network and returns the nearest n matches. Wher
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import locationiq
+from locationiq.rest import ApiException
 from pprint import pprint
-configuration = openapi_client.Configuration()
+configuration = locationiq.Configuration()
 # Configure API key authorization: key
 configuration.api_key['key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -32,9 +32,9 @@ configuration.api_key['key'] = 'YOUR_API_KEY'
 # Defining host is optional and default to https://eu1.locationiq.com/v1
 configuration.host = "https://eu1.locationiq.com/v1"
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with locationiq.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.NearestApi(api_client)
+    api_instance = locationiq.NearestApi(api_client)
     coordinates = '-0.16102,51.523854' # str | String of format {longitude},{latitude};{longitude},{latitude}[;{longitude},{latitude} ...] or polyline({polyline}) or polyline6({polyline6}). polyline follows Google's polyline format with precision 5
 generate_hints = 'false' # str | Adds a Hint to the response which can be used in subsequent requests, see hints parameter. Input Value - true (default), false Format - Base64 String (optional)
 exclude = 'toll' # str | Additive list of classes to avoid, order does not matter. input Value - {class}[,{class}] Format - A class name determined by the profile or none. (optional)

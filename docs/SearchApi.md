@@ -1,4 +1,4 @@
-# openapi_client.SearchApi
+# locationiq.SearchApi
 
 All URIs are relative to *https://eu1.locationiq.com/v1*
 
@@ -20,10 +20,10 @@ The Search API allows converting addresses, such as a street address, into geogr
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import locationiq
+from locationiq.rest import ApiException
 from pprint import pprint
-configuration = openapi_client.Configuration()
+configuration = locationiq.Configuration()
 # Configure API key authorization: key
 configuration.api_key['key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -32,9 +32,9 @@ configuration.api_key['key'] = 'YOUR_API_KEY'
 # Defining host is optional and default to https://eu1.locationiq.com/v1
 configuration.host = "https://eu1.locationiq.com/v1"
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with locationiq.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SearchApi(api_client)
+    api_instance = locationiq.SearchApi(api_client)
     q = 'Empire state building' # str | Address to geocode
 format = 'json' # str | Format to geocode. Only JSON supported for SDKs
 normalizecity = 1 # int | For responses with no city value in the address section, the next available element in this order - city_district, locality, town, borough, municipality, village, hamlet, quarter, neighbourhood - from the address section will be normalized to city. Defaults to 1 for SDKs.

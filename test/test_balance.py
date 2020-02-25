@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.balance import Balance  # noqa: E501
-from openapi_client.rest import ApiException
+import locationiq
+from locationiq.models.balance import Balance  # noqa: E501
+from locationiq.rest import ApiException
 
 class TestBalance(unittest.TestCase):
     """Balance unit test stubs"""
@@ -33,11 +33,11 @@ class TestBalance(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.balance.Balance()  # noqa: E501
+        # model = locationiq.models.balance.Balance()  # noqa: E501
         if include_optional :
             return Balance(
                 status = '0', 
-                balance = openapi_client.models.daybalance.daybalance(
+                balance = locationiq.models.daybalance.daybalance(
                     day = 56, 
                     bonus = 56, )
             )

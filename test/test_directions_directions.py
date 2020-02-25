@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.directions_directions import DirectionsDirections  # noqa: E501
-from openapi_client.rest import ApiException
+import locationiq
+from locationiq.models.directions_directions import DirectionsDirections  # noqa: E501
+from locationiq.rest import ApiException
 
 class TestDirectionsDirections(unittest.TestCase):
     """DirectionsDirections unit test stubs"""
@@ -33,7 +33,7 @@ class TestDirectionsDirections(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.directions_directions.DirectionsDirections()  # noqa: E501
+        # model = locationiq.models.directions_directions.DirectionsDirections()  # noqa: E501
         if include_optional :
             return DirectionsDirections(
                 code = '0', 
@@ -41,7 +41,7 @@ class TestDirectionsDirections(unittest.TestCase):
                     None
                     ], 
                 routes = [
-                    openapi_client.models.directions_directions_routes.directions_directions_routes(
+                    locationiq.models.directions_directions_routes.directions_directions_routes(
                         legs = [
                             None
                             ], 

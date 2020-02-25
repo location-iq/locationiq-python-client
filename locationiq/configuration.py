@@ -38,7 +38,7 @@ class Configuration(object):
     :param username: Username for HTTP basic authentication
     :param password: Password for HTTP basic authentication
     :param signing_info: Configuration parameters for HTTP signature.
-        Must be an instance of openapi_client.signing.HttpSigningConfiguration
+        Must be an instance of locationiq.signing.HttpSigningConfiguration
 
     :Example:
 
@@ -51,7 +51,7 @@ class Configuration(object):
             name: JSESSIONID  # cookie name
 
     You can programmatically set the cookie:
-      conf = openapi_client.Configuration(
+      conf = locationiq.Configuration(
         api_key={'cookieAuth': 'abc123'}
         api_key_prefix={'cookieAuth': 'JSESSIONID'}
       )
@@ -59,7 +59,7 @@ class Configuration(object):
        Cookie: JSESSIONID abc123
 
     Configure API client with HTTP basic authentication:
-      conf = openapi_client.Configuration(
+      conf = locationiq.Configuration(
           username='the-user',
           password='the-password',
       )
@@ -67,7 +67,7 @@ class Configuration(object):
     Configure API client with HTTP signature authentication. Use the 'hs2019' signature scheme,
     sign the HTTP requests with the RSA-SSA-PSS signature algorithm, and set the expiration time
     of the signature to 5 minutes after the signature has been created.
-    Note you can use the constants defined in the openapi_client.signing module, and you can
+    Note you can use the constants defined in the locationiq.signing module, and you can
     also specify arbitrary HTTP headers to be included in the HTTP signature, except for the
     'Authorization' header, which is used to carry the signature.
 
@@ -76,8 +76,8 @@ class Configuration(object):
     load balancers may add/modify/remove headers. Include the HTTP headers that you know
     are not going to be modified in transit.
 
-      conf = openapi_client.Configuration(
-        signing_info = openapi_client.signing.HttpSigningConfiguration(
+      conf = locationiq.Configuration(
+        signing_info = locationiq.signing.HttpSigningConfiguration(
             key_id =                 'my-key-id',
             private_key_path =       'rsa.pem',
             signing_scheme =         signing.SCHEME_HS2019,
@@ -137,7 +137,7 @@ class Configuration(object):
         self.logger = {}
         """Logging Settings
         """
-        self.logger["package_logger"] = logging.getLogger("openapi_client")
+        self.logger["package_logger"] = logging.getLogger("locationiq")
         self.logger["urllib3_logger"] = logging.getLogger("urllib3")
         self.logger_format = '%(asctime)s %(levelname)s %(message)s'
         """Log format
