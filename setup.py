@@ -13,7 +13,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "locationiq"
-VERSION = "1.0.0"
+VERSION = "1.1.0"
 # To install the library, run the following
 #
 # python setup.py install
@@ -27,10 +27,44 @@ setup(
     name=NAME,
     version=VERSION,
     description="LocationIQ",
+    version = '1.1.0',
+    license='MIT'
     author="OpenAPI Generator community",
     author_email="team@openapitools.org",
-    url="",
-    keywords=["OpenAPI", "OpenAPI-Generator", "LocationIQ"],
+    url="https://github.com/location-iq/locationiq-python-client",
+    download_url = 'https://github.com/location-iq/locationiq-python-client/archive/1.1.0.tar.gz'
+    keywords=[
+        "OpenAPI", 
+        "OpenAPI-Generator", 
+        "api",
+        "map",
+        "maps",
+        "locationiq",
+        "location",
+        "locate",
+        "forward",
+        "geocoding",
+        "forward-geocoding",
+        "reverse",
+        "reverse-geocoding",
+        "autocomplete",
+        "directions",
+        "matrix",
+        "distance-matrix",
+        "matching",
+        "nearest",
+        "nearby",
+        "countries",
+        "nearby-countries",
+        "nearby",
+        "points-of-interests",
+        "nearby-points-of-interests",
+        "venues",
+        "places",
+        "road",
+        "nearest-road",
+        "snap-to-road"
+        ],
     install_requires=REQUIRES,
     packages=find_packages(exclude=["test", "tests"]),
     include_package_data=True,
