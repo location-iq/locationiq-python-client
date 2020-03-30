@@ -27,15 +27,14 @@ setup(
     name=NAME,
     version=VERSION,
     description="LocationIQ",
-    version = '1.1.0',
-    license='MIT'
+    license='MIT',
     author="OpenAPI Generator community",
     author_email="team@openapitools.org",
     url="https://github.com/location-iq/locationiq-python-client",
-    download_url = 'https://github.com/location-iq/locationiq-python-client/archive/1.1.0.tar.gz'
+    download_url = 'https://github.com/location-iq/locationiq-python-client/archive/1.1.0.tar.gz',
     keywords=[
-        "OpenAPI", 
-        "OpenAPI-Generator", 
+        "OpenAPI",
+        "OpenAPI-Generator",
         "api",
         "map",
         "maps",
